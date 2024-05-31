@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family: "Poppins", sans-serif;
+}
+.cards{
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 150px auto;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+button{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+form input[type="text"]{
+ padding: 12px;
+ border-radius: 40px;
+ border: none;
+ outline: none;
+ width: 220px;
+}
+
+.ico{
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.ico img{
+    width: 200px;
+    margin: 0;
+    padding: 0;
+}
+.temp{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff
+}
+
+.clouds{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin: 5px 0;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    color: white;
+    margin: 40px 0 0 0;
+}
+
+.details_hum{
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.details_wspeed{
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.w-speed, 
+.Humidity{
+    font-size: 13px;
+}
+
+@media screen and (max-width: 500px) {
+    .cards{
+        width: 90%;
+    }
+}

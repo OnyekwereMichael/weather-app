@@ -7,24 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Weather App</h1>
+    <section class="cards">
 
-    <form>
-         <input type="text" id="js-input">
-         <input type="submit" value="Get weather">
-    </form>
+      <form>
+          <input type="text" id="js-input" placeholder="new york">
+          <!-- <input type="submit" value="Get weather"> -->
+          <button type="submit"><img src="image/search.png" alt="" width="20px"></button>
+      </form>
 
-    <div id="content">
-        <img src="http://openweathermap.org/img/wn/01d.png" alt="" class="ico">
-        <h1 class="temp">25°c</h1>
-         <p class="clouds">Scattered Cloud</p>
+      <div id="content">
+        <div class="ico">
+          <img src="http://openweathermap.org/img/wn/04n.png"  alt="weather icon" >
+        </div>
+          <h1 class="temp">25°c</h1>
+          <p class="clouds">Scattered Cloud</p>
 
-         <div class="details">
-             <p class="Feels">Feels like 25</p>
-             <p class="Humidity">Humidity 60%</p>
-             <p class="w-speed">Wind speed</p>
-         </div>
-    </div>
+          <div class="details">
+            <div >
+                <div class="details_hum">
+                <img src="image/humidity.png" alt="" width="30px">
+                <p class="Humidity"> 60%</p>
+              </div>
+            </div>
+            <div>
+                <div class="details_wspeed">
+                <img src="image/wind.png" alt="" width="30px">
+                 <p class="w-speed">10.29 km/h </p>
+                </div>
+            </div>
+          </div>
+      </div>
+  </section>
     <script src="script.js"></script>
 </body>
 </html>
