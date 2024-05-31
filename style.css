@@ -102,4 +102,11 @@ gap: 10px;
     .cards{
         width: 90%;
     }
+    form{
+        justify-content: space-between'
+    }
+
+    form input[type="text"]{
+        width: 300px;
+    }
 }
