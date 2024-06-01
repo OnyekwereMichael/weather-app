@@ -42,7 +42,7 @@ async function getWeather(inputValue) {
     } catch (error) {
         weather_data.querySelector('.ico').innerHTML =""
         weather_data.querySelector(".temp").textContent = ""
-        weather_data.querySelector(".clouds").textContent = `You entereds a wrong country`
+        weather_data.querySelector(".clouds").textContent = `An error occured...`
         weather_data.querySelector(".details .Humidity").textContent =""
         weather_data.querySelector(" .details .w-speed").textContent = ""
     }
