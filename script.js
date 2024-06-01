@@ -5,6 +5,7 @@ const inputElement = document.getElementById("js-input")
 const form = document.querySelector("form")
 const weather_data = document.getElementById('content')
 const weather_details = document.getElementById('details')
+const icon = document.querySelector(".ico")
 
 form.addEventListener('submit', (event) => {
  event.preventDefault()
@@ -27,13 +28,23 @@ async function getWeather(inputValue) {
 
        const temp = Math.round(data.main.temp)
        const description = data.weather[0].description
-       const image = data.weather[0].icon
-       console.log(`<img src="http://openweathermap.org/img/wn/${image}.png" alt="">`
-    )
+       const main = data.weather[0].main;
        const humidity = data.main.humidity
        const wind_speed = data.wind.speed;
 
-       weather_data.querySelector('.ico').innerHTML =`<img src="http://openweathermap.org/img/wn/${image}.png" alt="weather icon"/>`
+    //    weather_data.querySelector('.ico').innerHTML =`<img src="http://openweathermap.org/img/wn/${image}.png" alt="weather icon"/>`
+
+    if(main == "Clouds"){
+        icon.innerHTML = `<img src = "image/clouds.png">`
+     }else if(main == "Clear"){
+        icon.innerHTML = `<img src = "image/clear.png">`
+     }else if(main == "Mist"){
+        icon.innerHTML = `<img src = "image/mist.png">`
+     }else if(main == "Rain"){
+        icon.innerHTML = `<img src = "image/rain.png">`
+     }else if(main == "Drizzle"){
+        icon.innerHTML = `<img src = "image/drizzle.png">`
+     }
        weather_data.querySelector(".temp").textContent = `${temp}°c`
        weather_data.querySelector(".clouds").textContent = `${description}`
        weather_data.querySelector(".details .Humidity").textContent = `Humidity ${humidity}`
